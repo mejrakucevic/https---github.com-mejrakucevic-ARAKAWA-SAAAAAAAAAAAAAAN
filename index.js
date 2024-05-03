@@ -38,4 +38,20 @@ let Blog = (Title, Body) => {
   return alert(`${Title} - ${Body}`);
 };
 
-Blog("Dog", "Breeds");
+// Blog("Dog", "Breeds");
+
+// arrow function nd this keyword
+
+let tlou = {
+  // adding properties
+  characters: ["Joe", "Ellie"],
+
+  // adding method
+  printWDish: function () {
+    setTimeout(function () {
+      console.log(this.characters.join(" - "));
+    }, 3000);
+  },
+};
+
+alert(tlou.characters);
