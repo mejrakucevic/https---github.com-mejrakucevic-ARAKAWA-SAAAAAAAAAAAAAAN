@@ -48,10 +48,8 @@ let tlou = {
 
   // adding method
   printWDish: function () {
-    setTimeout(function () {
-      console.log(this.characters.join(" - "));
-    }, 3000);
+    setTimeout(() => console.log(this.characters.join(" - ")), 3000);
   },
 };
 
-alert(tlou.characters);
+tlou.printWDish();
