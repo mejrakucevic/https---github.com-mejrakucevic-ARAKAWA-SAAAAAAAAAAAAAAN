@@ -52,4 +52,25 @@ let tlou = {
   },
 };
 
-tlou.printWDish();
+// tlou.printWDish();
+
+// destructuring objects
+let ThingsToDo = {
+  morning: "Exercise",
+  afternoon: "Work",
+  evening: "Code",
+  night: ["Read", "Sleep"],
+};
+
+let { morning, evening } = ThingsToDo;
+
+// console.log(morning, " - ", evening);
+
+let uniStudent = ({ name, uni }) => {
+  console.log(`${name} from ${uni}`);
+};
+
+uniStudent({
+  name: "Mejra",
+  uni: "UNINP",
+});
