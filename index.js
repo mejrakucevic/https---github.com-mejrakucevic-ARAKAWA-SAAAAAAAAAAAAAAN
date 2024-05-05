@@ -74,3 +74,22 @@ uniStudent({
   name: "Mejra",
   uni: "UNINP",
 });
+
+var tlouCharacters = ["Joe", "Mike"];
+var tlouCharacter = ["Ellie"];
+
+var allTlouCharacters = [...tlouCharacters, ...tlouCharacter];
+console.log(allTlouCharacters);
+
+var day = {
+  breakfast: "Eggs",
+  lunch: "Chicken",
+};
+
+var night = {
+  dinner: "Salad",
+};
+
+var meals = { ...day, ...night };
+
+console.log(meals);
