@@ -1,0 +1,6 @@
+.users {
+  display: flex;
+  border: 2px solid black;
+  width: 25%;
+  flex-direction: column;
+}
