@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { Component } from "react";
-import "./App.css";
+import "../App.css";
+import Loading from "./Loading";
 
 class App extends Component {
   constructor(props) {
@@ -29,19 +30,21 @@ class App extends Component {
   render() {
     return (
       <div className="users">
-        {!this.state.loading
-          ? this.state.users.map((user) => (
-              <>
-                <div>
-                  <h3>
-                    {user.name.first} {user.name.last}
-                  </h3>
-                  <div>{user.email}</div>
-                  <hr />
-                </div>
-              </>
-            ))
-          : "Loading"}
+        {!this.state.loading ? (
+          this.state.users.map((user) => (
+            <>
+              <div>
+                <h3>
+                  {user.name.first} {user.name.last}
+                </h3>
+                <div>{user.email}</div>
+                <hr />
+              </div>
+            </>
+          ))
+        ) : (
+          <Loading message="Loading..." />
+        )}
       </div>
     );
   }
